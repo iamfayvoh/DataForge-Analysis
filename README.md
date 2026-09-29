@@ -1,24 +1,21 @@
-# 📊 E-Commerce Sales & Profitability Analysis (Excel Data Project)
+# E-Commerce Sales & Profitability Analysis (Excel Data Project)
 
 ![Excel](https://img.shields.io/badge/Tool-Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 ![Status](https://img.shields.io/badge/Project_Status-Completed-success?style=for-the-badge)
 
-## 📌 Project Overview
+# Project Overview
 This project provides an end-to-end sales performance and profitability audit for an e-commerce platform. Using Microsoft Excel, raw transaction data was audited for quality, transformed into analytical tables, evaluated through pivot tables, and visualized via an executive dashboard. 
 
 The primary objective is to **identify profit leaks**, uncover performance drivers across product categories and payment methods, and offer data-backed strategic recommendations to eliminate revenue friction.
 
----
-
-## 🖼️ Executive Dashboard Preview
+# Executive Dashboard Preview
 
 <!-- INSERT YOUR DASHBOARD IMAGE BELOW -->
-![E-Commerce Sales & Profitability Dashboard](YOUR_DASHBOARD_IMAGE_URL_HERE)
+<img src="Dashboard.png" >
 *Figure 1.1: Interactive E-Commerce Sales & Profitability Dashboard built in Microsoft Excel.*
 
----
 
-## 🔑 Key Performance Indicators (KPIs)
+## Key Performance Indicators (KPIs)
 
 * **Total Revenue:** ₹437.8K (₹437,771)
 * **Net Profit:** ₹37.0K (₹36,963)
@@ -27,9 +24,8 @@ The primary objective is to **identify profit leaks**, uncover performance drive
 * **Total Transactions:** 1,500 Orders
 * **Average Order Value (AOV):** ₹875.54
 
----
 
-## 📁 Workbook Architecture & Methodology
+## Workbook Architecture & Methodology
 
 The analysis was performed across a structured multi-sheet Excel workbook (`Data_Forge_Sales_Analysis_Assignment.xlsx`):
 
@@ -44,12 +40,11 @@ The analysis was performed across a structured multi-sheet Excel workbook (`Data
 | `Details_cleaned` | Raw master dataset (1,500 clean orders). |
 | `Data_Quality_Report` | Audit trail documenting dataset verification and structural setup. |
 
----
 
-## 🚨 Key Insights & Profit Leak Analysis
+# Key Insights & Profit Leak Analysis
 
 <!-- INSERT YOUR PROFIT LEAKS TABLE IMAGE HERE -->
-![Profit Leaks Analysis](YOUR_PROFIT_LEAKS_IMAGE_URL_HERE)
+<img src="Profit_leaks.jpg">
 *Figure 1.2: Profit Leak Breakdown by Sub-Category and Payment Method.*
 
 ### 1. Loss-Making Sub-Categories (Direct Margin Leaks)
@@ -74,7 +69,7 @@ While all payment methods are net profitable overall, transaction-level losses r
 
 ---
 
-## 💡 Strategic Business Recommendations
+## Strategic Business Recommendations
 
 | Objective | Focus Area | Action Plan | Impact |
 | :--- | :--- | :--- | :--- |
@@ -86,8 +81,28 @@ While all payment methods are net profitable overall, transaction-level losses r
 
 ---
 
-## 💻 Technical Excel Formulas Used
+## Technical Excel Formulas Used
 
 * **Multi-Criteria Counting (COUNTIFS):**
   ```excel
   =COUNTIFS(Details_cleaned!G:G, "COD", Details_cleaned!C:C, "<0")
+
+ * **Dynamic Category Aggregation (SUMIFS):**
+  ```excel
+  =SUMIFS(Details_cleaned!C:C, Details_cleaned!E:E, "Electronics")
+```
+## Tools & Skills Used.
+
+### Software & Tools
+* **Microsoft Excel**: Advanced spreadsheet modeling, data transformation, multi-table aggregations, dynamic pivot tables, and executive dashboard design.
+
+### Analytics & Business Intelligence Skills
+* **Data Auditing & Cleaning**: Quality inspection, dataset duplication for audit preservation, missing value verification, and field data type formatting (Currency, Numbers).
+* **Profitability & Financial Modeling**: Unit economics evaluation, profit margin benchmarking, Average Order Value (AOV) tracking, and loss-pool identification.
+* **Profit Leak Identification**: Segmenting catalog performance to isolate negative-margin sub-categories and evaluating loss order severity across payment methods.
+* **Advanced Excel Functions**: 
+  * Multi-criteria conditional logic (`SUMIFS`, `COUNTIFS`).
+  * Dynamic ranking (`RANK`) and baseline aggregations (`COUNTA`, `SUM`).
+  * Pivot Table data extraction (`GETPIVOTDATA`).
+* **Dashboard Design & Data Visualization**: Executive KPI card layouts, conditional visual hierarchy, custom color palettes, and pivot chart integration.
+* **Strategic Business Consulting**: Converting raw transactional data into actionable operational recommendations, pricing floors, and risk mitigation plans.
